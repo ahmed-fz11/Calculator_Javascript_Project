@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>   
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 1em;">Calculator</h1>
+    <div class="calc-box">
+        <div class="display">
+            <div class="result" id="result"></div>
+            <input type="text" id="expr" class="expression" value="" placeholder="0">
+            <div>
+                <input type="text" id="varName" placeholder="Variable Name">
+                <input type="text" id="varVal" placeholder="Variable Value">
+            </div>
+        </div>
+        <div class="grid-cont">
+            <button onclick="logic.clearValue()">AC</button>
+            <button class="bckspc" onclick="logic.backspaceValue()">⌫</button>
+            <button onclick="logic.appendValue('/')">÷</button>
+            <button onclick="logic.appendValue('sin(')">sin</button>
+            <button onclick="logic.appendValue('cos(')">cos</button>
+            <button onclick="logic.appendValue('7')">7</button>
+            <button onclick="logic.appendValue('8')">8</button>
+            <button onclick="logic.appendValue('9')">9</button>
+            <button onclick="logic.appendValue('*')">*</button>
+            <button onclick="logic.appendValue('tan(')">tan</button>
+            <button onclick="logic.appendValue('^')">^</button>
+            <button onclick="logic.appendValue('4')">4</button>
+            <button onclick="logic.appendValue('5')">5</button>
+            <button onclick="logic.appendValue('6')">6</button>
+            <button onclick="logic.appendValue('-')">-</button>
+            <button onclick="logic.appendValue('π')">π</button>
+            <button onclick="logic.appendValue('e')">e</button>
+            <button onclick="logic.appendValue('1')">1</button>
+            <button onclick="logic.appendValue('2')">2</button>
+            <button onclick="logic.appendValue('3')">3</button>
+            <button onclick="logic.appendValue('+')">+</button>
+            <button onclick="logic.appendValue('(')">(</button>
+            <button onclick="logic.appendValue(')')">)</button>
+            <button onclick="logic.appendValue('.')">.</button>
+            <button onclick="logic.appendValue('0')">0</button>
+            <button class="wide-b" onclick="logic.evaluateExpression()">=</button>
+            <button onclick="logic.addVariable()">Add Variable</button>
+            <button onclick="logic.appendValue('sqrt(')">√</button>
+        </div>
+    </div>
+
+    <script type="module">
+        import * as logic from "./index.js";
+        window.logic = logic;
+    </script>
+</body>
+</html>

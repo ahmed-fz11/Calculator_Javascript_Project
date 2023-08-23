@@ -1,0 +1,68 @@
+.grid-cont{
+    /* border: 2px solid black; */
+    width: 40%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(5,1fr);
+    /* height: 50vh; */
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    align-items: end;
+    padding-right: 3em;
+    /* border: 2px solid black; */
+    border: 1px solid rgba(0, 0, 0, 0.438);
+    width: 40%;
+    background-color: rgba(128, 128, 128, 0.219);
+    /* height: 15vh; */
+}
+
+.calc-box{
+    margin-top: 3em;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wide-b{
+    grid-column-end: span 2;
+}
+
+.bckspc{
+    grid-column-end: span 2;
+}
+
+.expression{
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    text-align: end;
+}
+
+button{
+    background-color: rgba(0, 0, 0, 0.459);
+    color: white;
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.438);
+}
+
+body{
+    background-image: linear-gradient(to right, red , yellow);
+}
+
+#varName,#varVal{
+    background-color: inherit;
+    border: none;
+}
+
+::placeholder { 
+    color: inherit;
+    opacity: 0.4;
+}
